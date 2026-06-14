@@ -1,0 +1,8 @@
+*.py
+__pycache__/
+cache/
+outputs/
+requirements.txt
+PROTOTYPE_CONTEXT.md
+*.py[cod]
+.DS_Store
