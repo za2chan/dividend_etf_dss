@@ -1,0 +1,147 @@
+Screened universe: 94 kept, 5 dropped
+Dropped tickers:
+ticker              category                    reason
+  JEPQ          covered_call only 4.1 years of history
+  QRMI          covered_call only 4.8 years of history
+  SPYI          covered_call only 3.8 years of history
+  XRMI          covered_call only 4.8 years of history
+  IPFF preferred_high_income    no distributions found
+
+Feature panel: 16020 rows, 14891 labeled rows
+
+Classifier
+Training rows: 14,891 | cut label rate: 61.7%
+Validation status: ok
+Validation: folds=20 test_rows=14701 PR-AUC=0.854 Risky precision=0.817
+Baselines: decline-rule PR-AUC=0.644 decline-rule precision=0.696 random PR-AUC=0.613
+
+Latest ETF Scores
+Buckets: Safe=21, Watch=18, Risky=55
+ticker               category  p_cut bucket dist_yield   price
+  KBWY                   reit  51.1%  Risky      7.92%  $17.39
+   PFF  preferred_high_income  59.5%  Risky      5.47%  $31.23
+   IYR                   reit  59.9%  Risky      1.75% $100.00
+   PSK  preferred_high_income  60.2%  Risky      7.04%  $30.69
+  PFFD  preferred_high_income  60.8%  Risky      6.37%  $18.84
+   VRP  preferred_high_income  65.0%  Risky      5.85%  $24.35
+  DGRW        dividend_equity  65.3%  Risky      1.09%  $97.16
+  DIVO           covered_call  66.9%  Risky      6.05%  $46.03
+  USRT                   reit  66.9%  Risky      2.08%  $63.91
+   DON        dividend_equity  67.5%  Risky      2.04%  $54.92
+   ICF                   reit  68.2%  Risky      1.92%  $66.75
+  REET                   reit  71.6%  Risky      2.73%  $26.83
+   PID international_dividend  72.3%  Risky      2.13%  $22.99
+  VYMI international_dividend  72.7%  Risky      2.36%  $99.42
+  PFXF  preferred_high_income  73.0%  Risky      6.09%  $18.77
+   IEI                   bond  73.5%  Risky      3.64% $117.07
+   MUB                   bond  73.7%  Risky      3.17% $107.01
+   IEF                   bond  75.2%  Risky      3.90%  $94.00
+   BSV                   bond  76.4%  Risky      4.00%  $77.74
+   EMB                   bond  76.7%  Risky      5.06%  $95.90
+   DES        dividend_equity  77.0%  Risky      2.02%  $38.31
+   SHY                   bond  77.4%  Risky      3.69%  $81.97
+  SPAB                   bond  78.2%  Risky      4.05%  $25.40
+   BIV                   bond  78.4%  Risky      4.22%  $76.34
+  IGSB                   bond  79.5%  Risky      4.58%  $52.26
+   LQD                   bond  79.6%  Risky      4.57% $108.62
+  SPIB                   bond  79.8%  Risky      4.46%  $33.35
+   TLT                   bond  80.3%  Risky      4.59%  $85.31
+  USIG                   bond  80.6%  Risky      4.74%  $51.05
+  VCSH                   bond  80.7%  Risky      4.45%  $78.79
+   AGG                   bond  80.9%  Risky      3.99%  $98.50
+   HYG                   bond  81.0%  Risky      5.92%  $79.68
+  VCIT                   bond  82.2%  Risky      4.80%  $82.26
+  SPSB                   bond  82.2%  Risky      4.41%  $29.92
+  MINT                   bond  82.4%  Risky      4.28% $100.47
+  TFLO                   bond  82.7%  Risky      3.90%  $50.50
+  JPST                   bond  84.3%  Risky      4.26%  $50.44
+   JNK                   bond  84.4%  Risky      6.62%  $96.00
+  FLOT                   bond  85.9%  Risky      4.53%  $50.94
+  ANGL                   bond  86.2%  Risky      6.38%  $29.03
+  SGOV                   bond  86.8%  Risky      3.86% $100.41
+   IDV international_dividend  87.4%  Risky      2.66%  $44.10
+  SJNK                   bond  88.3%  Risky      7.02%  $24.95
+  HYLB                   bond  88.5%  Risky      6.49%  $36.40
+  NEAR                   bond  88.6%  Risky      4.44%  $50.58
+   BND                   bond  89.1%  Risky      3.97%  $73.06
+  SHYG                   bond  89.1%  Risky      7.02%  $42.24
+   DGS international_dividend  90.0%  Risky      2.41%  $65.34
+   DWX international_dividend  90.0%  Risky      2.79%  $46.45
+  SRLN                   bond  90.3%  Risky      7.49%  $40.35
+   REM                   reit  92.6%  Risky      6.68%  $21.55
+   DEM international_dividend  93.4%  Risky      2.73%  $55.77
+   FGD international_dividend  94.2%  Risky      3.63%  $33.51
+  XYLG           covered_call 100.0%  Risky     12.60%  $28.97
+  QYLG           covered_call 100.0%  Risky     15.56%  $30.34
+  MLPA      mlp_energy_income   2.2%   Safe      7.28%  $54.08
+  AMLP      mlp_energy_income   6.2%   Safe      7.64%  $52.59
+  NUSI           covered_call   8.4%   Safe      8.00%  $56.44
+   VIG        dividend_equity  10.4%   Safe      1.10% $235.50
+   FVD        dividend_equity  10.5%   Safe      1.77%  $46.84
+  MLPX      mlp_energy_income  10.6%   Safe      4.15%  $73.21
+   SDY        dividend_equity  10.8%   Safe      1.86% $148.67
+  FDVV        dividend_equity  11.5%   Safe      1.98%  $60.96
+   VYM        dividend_equity  11.7%   Safe      1.65% $160.48
+  RDVY        dividend_equity  12.0%   Safe      0.70%  $76.09
+  NOBL        dividend_equity  13.0%   Safe      1.61%  $53.60
+  SCHD        dividend_equity  13.1%   Safe      2.46%  $32.37
+  PCEF     multi_asset_income  14.6%   Safe      7.08%  $20.18
+  DGRO        dividend_equity  15.2%   Safe      1.53%  $75.15
+   PEY        dividend_equity  16.2%   Safe      4.14%  $22.37
+  SPHD        dividend_equity  16.8%   Safe      4.31%  $49.07
+  INKM     multi_asset_income  17.0%   Safe      3.41%  $34.60
+   DVY        dividend_equity  17.3%   Safe      2.61% $153.66
+   FDL        dividend_equity  17.5%   Safe      2.76%  $49.85
+  SPYD        dividend_equity  18.5%   Safe      3.15%  $47.24
+  QYLD           covered_call  19.4%   Safe     10.55%  $18.13
+  RYLD           covered_call  20.2%  Watch     10.72%  $15.76
+   HDV        dividend_equity  21.6%  Watch      2.24%  $27.24
+  XYLD           covered_call  22.9%  Watch      9.57%  $40.73
+  MDIV     multi_asset_income  24.6%  Watch      5.81%  $16.47
+  CEFS     multi_asset_income  28.3%  Watch      6.55%  $25.44
+   VNQ                   reit  28.6%  Watch      2.77%  $94.41
+  JEPI           covered_call  32.9%  Watch      8.27%  $55.41
+   DLN        dividend_equity  33.8%  Watch      1.58%  $96.17
+   PGX  preferred_high_income  34.6%  Watch      5.76%  $10.94
+   DTD        dividend_equity  34.7%  Watch      1.64%  $92.73
+   FPE  preferred_high_income  36.4%  Watch      5.38%  $17.98
+   YYY     multi_asset_income  36.8%  Watch     11.64%  $11.34
+   PGF  preferred_high_income  37.4%  Watch      5.77%  $13.76
+   DHS        dividend_equity  41.3%  Watch      2.95% $110.45
+  XLRE                   reit  42.8%  Watch      2.35%  $43.51
+   RWR                   reit  44.3%  Watch      2.60% $108.44
+  LVHD        dividend_equity  46.2%  Watch      3.41%  $42.16
+  SCHH                   reit  47.0%  Watch      2.14%  $23.08
+
+Safe Plan
+Risk: minimum variance | expected yield: 5.21% | annual vol: 6.70% | projected monthly income: $217.01
+ticker              category bucket weight  shares   price  yield P(cut)
+  INKM    multi_asset_income   Safe  17.4%     252  $34.60  3.41%  17.0%
+   FPE preferred_high_income  Watch  14.0%     390  $17.98  5.38%  36.4%
+   PGX preferred_high_income  Watch   9.8%     446  $10.94  5.76%  34.6%
+  PCEF    multi_asset_income   Safe   9.6%     236  $20.18  7.08%  14.6%
+   PGF preferred_high_income  Watch   9.0%     326  $13.76  5.77%  37.4%
+   FVD       dividend_equity   Safe   7.0%      74  $46.84  1.77%  10.5%
+  MLPA     mlp_energy_income   Safe   6.7%      61  $54.08  7.28%   2.2%
+  QYLD          covered_call   Safe   5.9%     163  $18.13 10.55%  19.4%
+  AMLP     mlp_energy_income   Safe   5.3%      50  $52.59  7.64%   6.2%
+  SPHD       dividend_equity   Safe   5.3%      53  $49.07  4.31%  16.8%
+   FDL       dividend_equity   Safe   5.0%      50  $49.85  2.76%  17.5%
+   SDY       dividend_equity   Safe   5.0%      16 $148.67  1.86%  10.8%
+
+Balanced Plan
+Risk: best income per unit risk | expected yield: 9.28% | annual vol: 9.41% | projected monthly income: $386.58
+ticker           category bucket weight  shares  price  yield P(cut)
+  QYLD       covered_call   Safe  28.1%     774 $18.13 10.55%  19.4%
+   YYY multi_asset_income  Watch  22.2%     980 $11.34 11.64%  36.8%
+  AMLP  mlp_energy_income   Safe  13.9%     131 $52.59  7.64%   6.2%
+  PCEF multi_asset_income   Safe  13.8%     342 $20.18  7.08%  14.6%
+  MLPA  mlp_energy_income   Safe  12.5%     115 $54.08  7.28%   2.2%
+  RYLD       covered_call  Watch   6.2%     195 $15.76 10.72%  20.2%
+  INKM multi_asset_income   Safe   3.2%      46 $34.60  3.41%  17.0%
+
+High-Income Plan
+Risk: income with risk ceiling | expected yield: 10.88% | annual vol: 13.31% | projected monthly income: $453.26
+ticker           category bucket weight  shares  price  yield P(cut)
+  QYLD       covered_call   Safe  70.0%    1930 $18.13 10.55%  19.4%
+   YYY multi_asset_income  Watch  30.0%    1322 $11.34 11.64%  36.8%
