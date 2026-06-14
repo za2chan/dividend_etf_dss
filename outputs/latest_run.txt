@@ -1,0 +1,62 @@
+Screened universe: 24 kept, 1 dropped
+Dropped tickers:
+ticker     category                    reason
+  JEPQ covered_call only 4.1 years of history
+
+Feature panel: 4390 rows, 4102 labeled rows
+
+Classifier
+Training rows: 4,102 | cut label rate: 56.5%
+Validation status: ok
+Validation: folds=19 test_rows=3967 PR-AUC=0.871 Risky precision=0.852
+Baselines: decline-rule PR-AUC=0.608 decline-rule precision=0.710 random PR-AUC=0.556
+
+Latest ETF Scores
+Buckets: Safe=9, Watch=5, Risky=10
+ticker              category p_cut bucket dist_yield   price
+   RWR                  reit 53.3%  Risky      2.60% $108.44
+  SCHH                  reit 62.9%  Risky      2.14%  $23.08
+   PFF preferred_high_income 66.0%  Risky      5.47%  $31.23
+   BND                  bond 89.4%  Risky      3.97%  $73.06
+   AGG                  bond 89.5%  Risky      3.99%  $98.50
+  DIVO          covered_call 89.6%  Risky      6.05%  $46.03
+   LQD                  bond 91.8%  Risky      4.57% $108.62
+   TLT                  bond 92.0%  Risky      4.59%  $85.31
+   HYG                  bond 92.6%  Risky      5.92%  $79.68
+  VCIT                  bond 93.8%  Risky      4.80%  $82.26
+   VIG       dividend_equity  2.2%   Safe      1.10% $235.50
+   VYM       dividend_equity  3.3%   Safe      1.65% $160.48
+   SDY       dividend_equity  3.6%   Safe      1.86% $148.67
+  SCHD       dividend_equity  5.4%   Safe      2.46%  $32.37
+   DVY       dividend_equity  6.9%   Safe      2.61% $153.66
+  DGRO       dividend_equity  7.3%   Safe      1.53%  $75.15
+   HDV       dividend_equity 12.5%   Safe      2.24%  $27.24
+  QYLD          covered_call 16.8%   Safe     10.55%  $18.13
+  XYLD          covered_call 19.4%   Safe      9.57%  $40.73
+  RYLD          covered_call 20.7%  Watch     10.72%  $15.76
+  SPHD preferred_high_income 21.8%  Watch      4.31%  $49.07
+   VNQ                  reit 25.7%  Watch      2.77%  $94.41
+   PGX preferred_high_income 31.1%  Watch      5.76%  $10.94
+  JEPI          covered_call 41.8%  Watch      8.27%  $55.41
+
+Safe Plan
+Risk: minimum variance | expected yield: 5.79% | annual vol: 8.54% | projected monthly income: $241.16
+ticker              category bucket weight  shares  price yield P(cut)
+   HDV       dividend_equity   Safe  35.7%     654 $27.24 2.24%  12.5%
+  XYLD          covered_call   Safe  33.7%     414 $40.73 9.57%  19.4%
+   PGX preferred_high_income  Watch  30.6%    1397 $10.94 5.76%  31.1%
+
+Balanced Plan
+Risk: best income per unit risk | expected yield: 9.37% | annual vol: 11.57% | projected monthly income: $390.60
+ticker              category bucket weight  shares  price  yield P(cut)
+  XYLD          covered_call   Safe  35.0%     429 $40.73  9.57%  19.4%
+  QYLD          covered_call   Safe  35.0%     965 $18.13 10.55%  16.8%
+   PGX preferred_high_income  Watch  17.8%     814 $10.94  5.76%  31.1%
+  RYLD          covered_call  Watch  12.2%     386 $15.76 10.72%  20.7%
+
+High-Income Plan
+Risk: income with risk ceiling | expected yield: 10.26% | annual vol: 13.25% | projected monthly income: $427.49
+ticker     category bucket weight  shares  price  yield P(cut)
+  QYLD covered_call   Safe  35.0%     965 $18.13 10.55%  16.8%
+  XYLD covered_call   Safe  35.0%     429 $40.73  9.57%  19.4%
+  RYLD covered_call  Watch  30.0%     951 $15.76 10.72%  20.7%
