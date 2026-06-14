@@ -1,0 +1,9 @@
+{
+  "name": "dividend-etf-income-planner-ui",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "mkdir -p dist && cp web/index.html web/styles.css web/app.js dist/ && cp -R web/public/. dist/",
+    "dev": "npm run build && python3 -m http.server 5174 --directory dist"
+  }
+}
