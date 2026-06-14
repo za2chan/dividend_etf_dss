@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>US Dividend-ETF Income Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <h1>US Dividend-ETF Income Planner</h1>
+        <p id="dataMeta">Loading latest run...</p>
+      </div>
+      <div class="status-strip" id="statusStrip"></div>
+    </header>
+
+    <main class="app-shell">
+      <section class="controls-band" aria-label="Portfolio controls">
+        <label>
+          <span>Budget</span>
+          <input id="budgetInput" type="number" min="1000" step="1000" value="50000" />
+        </label>
+        <label>
+          <span>Scenario</span>
+          <select id="scenarioSelect">
+            <option value="max_weight_35">35% max weight</option>
+            <option value="no_max_weight">No max weight</option>
+          </select>
+        </label>
+        <div class="segmented" id="planTabs" aria-label="Portfolio plan"></div>
+        <label>
+          <span>Bucket</span>
+          <select id="bucketFilter">
+            <option value="all">All buckets</option>
+            <option value="Safe">Safe</option>
+            <option value="Watch">Watch</option>
+            <option value="Risky">Risky</option>
+          </select>
+        </label>
+        <label>
+          <span>Category</span>
+          <select id="categoryFilter">
+            <option value="all">All categories</option>
+          </select>
+        </label>
+        <label class="search-label">
+          <span>Ticker</span>
+          <input id="searchInput" type="search" placeholder="SCHD, QYLD..." />
+        </label>
+      </section>
+
+      <section class="kpi-grid" id="kpiGrid" aria-label="Portfolio summary"></section>
+
+      <section class="dashboard-grid">
+        <article class="panel allocation-panel">
+          <div class="panel-heading">
+            <div>
+              <h2>Allocation</h2>
+              <p id="allocationSubtitle"></p>
+            </div>
+          </div>
+          <div class="allocation-layout">
+            <div id="donutChart" class="donut-chart"></div>
+            <div id="weightBars" class="weight-bars"></div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-heading">
+            <div>
+              <h2>ETF Map</h2>
+              <p>P(cut) vs distribution yield</p>
+            </div>
+          </div>
+          <div id="scatterPlot" class="scatter-plot"></div>
+        </article>
+
+        <article class="panel model-panel">
+          <div class="panel-heading">
+            <div>
+              <h2>Model</h2>
+              <p id="modelSubtitle"></p>
+            </div>
+          </div>
+          <div id="modelMetrics" class="metric-list"></div>
+        </article>
+      </section>
+
+      <section class="tables-grid">
+        <article class="panel table-panel">
+          <div class="panel-heading">
+            <div>
+              <h2>Holdings</h2>
+              <p id="holdingsSubtitle"></p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Ticker</th>
+                  <th>Bucket</th>
+                  <th>Weight</th>
+                  <th>Shares</th>
+                  <th>Price</th>
+                  <th>Yield</th>
+                  <th>P(cut)</th>
+                </tr>
+              </thead>
+              <tbody id="holdingsBody"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="panel table-panel">
+          <div class="panel-heading">
+            <div>
+              <h2>ETF Scores</h2>
+              <p id="scoresSubtitle"></p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Ticker</th>
+                  <th>Category</th>
+                  <th>Bucket</th>
+                  <th>P(cut)</th>
+                  <th>Yield</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody id="scoresBody"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel dropped-panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Screening</h2>
+            <p id="screeningSubtitle"></p>
+          </div>
+        </div>
+        <div id="droppedList" class="dropped-list"></div>
+      </section>
+    </main>
+
+    <div id="tooltip" class="tooltip" hidden></div>
+    <script src="app.js"></script>
+  </body>
+</html>
